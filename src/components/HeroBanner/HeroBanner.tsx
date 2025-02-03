@@ -5,7 +5,7 @@ import WaitListForm from '../WaitListForm';
 
 const HeroBanner = () => {
   return (
-    <Wrapper className="h-[900px] bg-[url('/assets/gate.jpg')] bg-bottom bg-no-repeat bg-cover md:bg-[center_bottom_50px] 2xl:bg-center 2xl:h-screen">
+    <Wrapper className="h-[900px] bg-[url('/assets/gate.jpg')] bg-center bg-no-repeat bg-cover 2xl:h-screen">
       <Container className="flex flex-col items-center gap-8">
         <div className="text-primary max-w-[700px] flex flex-col md:items-center gap-2">
           <h1 className={[lora.className, 'text-4xl font-normal'].join(' ')}>
