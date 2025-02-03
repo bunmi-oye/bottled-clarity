@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <header className="w-full border-b border-primary/20">
-      <div className="w-full max-w-[1120px] mx-auto justify-between flex items-center py-[18px] px-xs sm:px-sm md:px-md md:py-sm lg:px-lg">
+      <div className="w-full max-w-[1200px] mx-auto justify-between flex items-center py-[18px] px-xs sm:px-sm md:px-md md:py-sm lg:px-lg">
         <Logo />
 
         <Button
