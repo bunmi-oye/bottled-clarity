@@ -4,6 +4,7 @@ import { roboto } from './fonts';
 import Navbar from '@/components/Navbar';
 import { SidebarProvider } from '@/context/SidebarContext';
 import Sidebar from '@/components/Sidebar';
+import { Toaster } from 'react-hot-toast';
 
 export const metadata: Metadata = {
   title: 'Bottled Clarity',
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
+        <Toaster />
         <SidebarProvider>
           <Navbar />
           <Sidebar />

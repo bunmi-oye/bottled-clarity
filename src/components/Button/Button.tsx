@@ -17,6 +17,7 @@ const Button = ({
   type = 'button',
   className,
   isAlternate = false,
+  disabled = false,
   children,
   ...buttonProps
 }: ButtonType) => {
@@ -25,7 +26,10 @@ const Button = ({
       type={type}
       className={`${
         isAlternate ? 'bg-white text-primary' : 'bg-primary text-white'
+      } ${
+        disabled ? 'opacity-50 cursor-not-allowed' : ''
       } rounded-full px-5 py-3 font-medium ${className}`}
+      disabled={disabled}
       {...buttonProps}
     >
       {children}
