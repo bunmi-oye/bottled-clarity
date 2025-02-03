@@ -10,6 +10,12 @@ export default {
       colors: {
         primary: '#2F3C7E',
       },
+      padding: {
+        xs: '12px',
+        sm: '16px',
+        md: '20px',
+        lg: '24px',
+      },
     },
   },
   plugins: [],

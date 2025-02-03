@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { roboto } from './fonts';
+import Navbar from '@/components/Navbar';
+import { SidebarProvider } from '@/context/SidebarContext';
+import Sidebar from '@/components/Sidebar';
 
 export const metadata: Metadata = {
   title: 'Bottled Clarity',
@@ -14,7 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        <SidebarProvider>
+          <Navbar />
+          <Sidebar />
+          {children}
+        </SidebarProvider>
+      </body>
     </html>
   );
 }
