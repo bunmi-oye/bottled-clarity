@@ -1,3 +1,9 @@
+import HeroBanner from '@/components/HeroBanner';
+
 export default function Home() {
-  return <h1>Bottled Clarity</h1>;
+  return (
+    <main>
+      <HeroBanner />
+    </main>
+  );
 }
