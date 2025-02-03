@@ -1,8 +1,7 @@
 'use client';
+import Button from '@/components/Button';
+import Logo from '@/components/Logo';
 import { useSidebar } from '@/context/SidebarContext';
-import Logo from '../Logo';
-import Button from '../Button';
-
 const Sidebar = () => {
   const { isOpen, toggleSidebar } = useSidebar();
 

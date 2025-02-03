@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { roboto } from './fonts';
-import Navbar from '@/components/Navbar';
+import Navbar from '@/layout/Navbar';
 import { SidebarProvider } from '@/context/SidebarContext';
-import Sidebar from '@/components/Sidebar';
+import Sidebar from '@/layout/Sidebar';
 import { Toaster } from 'react-hot-toast';
 
 export const metadata: Metadata = {
