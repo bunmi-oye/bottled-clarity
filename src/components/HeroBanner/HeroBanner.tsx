@@ -1,5 +1,5 @@
-import Wrapper from '@/layout/Wrapper/Wrapper';
-import Container from '@/layout/Container/Container';
+import Wrapper from '@/layout/Wrapper';
+import Container from '@/layout/Container';
 import { lora } from '@/app/fonts';
 import WaitListForm from '../WaitListForm';
 

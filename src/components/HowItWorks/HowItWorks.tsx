@@ -1,5 +1,5 @@
-import Wrapper from '@/layout/Wrapper/Wrapper';
-import Container from '@/layout/Container/Container';
+import Wrapper from '@/layout/Wrapper';
+import Container from '@/layout/Container';
 import Heading from '../Heading';
 import Step, { StepType } from '../Step';
 
