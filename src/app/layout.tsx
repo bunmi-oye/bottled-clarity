@@ -5,6 +5,7 @@ import Navbar from '@/layout/Navbar';
 import { SidebarProvider } from '@/context/SidebarContext';
 import Sidebar from '@/layout/Sidebar';
 import { Toaster } from 'react-hot-toast';
+import Footer from '@/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Bottled Clarity',
@@ -24,6 +25,7 @@ export default function RootLayout({
           <Navbar />
           <Sidebar />
           {children}
+          <Footer />
         </SidebarProvider>
       </body>
     </html>

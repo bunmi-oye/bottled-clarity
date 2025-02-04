@@ -1,10 +1,10 @@
 'use client';
 import { useState } from 'react';
-import Form from '../Form';
-import toast from 'react-hot-toast';
 import { Status } from '../Form/Form.type';
+import toast from 'react-hot-toast';
+import Form from '../Form';
 
-const WaitListForm = () => {
+const NewsletterForm = () => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<Status>('idle');
 
@@ -25,7 +25,7 @@ const WaitListForm = () => {
     };
     const date = new Date();
     const inputValue: { [key: string]: string } = {
-      'Waitlist Email': target.email.value,
+      'Newsletter Email': target.email.value,
       'Created At': date.toLocaleString(),
     };
 
@@ -33,7 +33,7 @@ const WaitListForm = () => {
     console.log(inputValue);
 
     // Construct the Google Sheets API endpoint URL
-    const APP_ID = process.env.NEXT_PUBLIC_GOOGLE_WAITLIST_SHEET_ID;
+    const APP_ID = process.env.NEXT_PUBLIC_GOOGLE_NEWSLETTER_SHEET_ID;
     const baseURL = `https://script.google.com/macros/s/${APP_ID}/exec`;
 
     // Create a form data object from the input values
@@ -50,8 +50,8 @@ const WaitListForm = () => {
           body: formData,
         }),
         {
-          loading: 'Adding to waitlist...',
-          success: 'Successfully added to waitlist!',
+          loading: 'Subscribing to newsletter...',
+          success: 'Successfully subscribed to newsletter!',
           error: 'Something went wrong! Please try again.',
         }
       );
@@ -78,11 +78,11 @@ const WaitListForm = () => {
       formData={{ email }}
       onChange={e => setEmail(e.target.value)}
       onSubmit={handleSubmit}
-      buttonLabel="Join waitlist"
+      buttonLabel="Subscribe Now"
       status={status}
-      className="[&>button]:px-14"
+      className="[&>input]:bg-white/20 [&>input]:placeholder:text-white/50 [&>input]:text-white [&>button]:bg-white [&>button]:text-primary [&>button]:px-14"
     />
   );
 };
 
-export default WaitListForm;
+export default NewsletterForm;

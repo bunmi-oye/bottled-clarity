@@ -8,4 +8,5 @@ export type FormType = {
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   onSubmit: (event: React.FormEvent<HTMLFormElement>) => Promise<void>;
   buttonLabel?: string;
+  className?: string;
 };

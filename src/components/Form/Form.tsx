@@ -7,6 +7,7 @@ const Form = ({
   onChange,
   onSubmit,
   buttonLabel = 'Submit',
+  className = '',
 }: FormType) => {
   return (
     <form
@@ -14,7 +15,7 @@ const Form = ({
         e.preventDefault();
         await onSubmit(e);
       }}
-      className="flex flex-col w-full gap-4 p-2 md:flex-row md:justify-center"
+      className={`flex flex-col w-full gap-4 p-2 md:flex-row md:justify-center ${className}`}
     >
       <input
         type="email"
