@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[url('/assets/arced_bg.png')] bg-top bg-no-repeat bg-cover mt-24">
+    <footer className="w-full bg-[url('/assets/arced_bg.webp')] bg-top bg-no-repeat bg-cover mt-24">
       <Container className="flex flex-col gap-4 text-white md:items-center md:text-center">
         <Heading className="text-white">Introducing Mindset Moment </Heading>
         <p className="max-w-[970px] text-xl">
