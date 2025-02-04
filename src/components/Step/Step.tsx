@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Heading from '../Heading';
 import { StepType } from './Step.type';
 
-const Step = ({ num, title, content, image }: StepType) => {
+const Step = ({ num, title, content, image, imageAlt }: StepType) => {
   const shouldFlipPosition = num % 2 === 0;
 
   return (
@@ -25,10 +25,10 @@ const Step = ({ num, title, content, image }: StepType) => {
       </div>
       <Image
         src={image}
-        alt="step"
-        width={548}
-        height={440}
-        className="w-full h-auto md:w-1/2 md:h-full lg:h-auto lg:w-[548px] aspect-[548/440] md:border-2 md:border-[#2A3D524D]/20 md:rounded-[12px] object-cover"
+        alt={imageAlt}
+        // width={548}
+        // height={440}
+        className="w-full md:w-1/2 lg:w-[548px] aspect-[548/440] md:border-2 md:border-[#2A3D524D]/20 md:rounded-[12px] object-cover"
       />
     </div>
   );
