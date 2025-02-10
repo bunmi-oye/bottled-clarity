@@ -7,29 +7,30 @@ const Step = ({ num, title, content, image, imageAlt }: StepType) => {
 
   return (
     <div
-      className={`border-2 border-[#2A3D524D]/20 rounded-[4px] overflow-hidden w-full flex justify-between gap-4 flex-col-reverse md:border-none md:rounded-none md:flex-row md:items-center md:gap-8 xl:gap-[116px] ${
+      className={`flex w-full flex-col-reverse justify-between gap-4 overflow-hidden rounded-[4px] border-2 border-[#2A3D524D]/20 md:flex-row md:items-center md:gap-8 md:rounded-none md:border-none xl:gap-[116px] ${
         shouldFlipPosition ? 'md:flex-row-reverse' : ''
       }`}
     >
-      <div className="p-4 flex flex-col gap-4">
+      <div className="flex flex-1 flex-col gap-4 p-4">
         <Heading
           isSubheading
-          className="border-[3px] relative w-12 h-12 rounded-full self-start border-primary/[12%]"
+          className="relative h-12 w-12 self-start rounded-full border-[3px] border-primary/[12%]"
         >
-          <span className="absolute bottom-1.5 left-1/2 -ml-6 w-12 text-primary text-center">
+          <span className="absolute bottom-1.5 left-1/2 -ml-6 w-12 text-center text-primary">
             {num}
           </span>
         </Heading>
         <Heading isSubheading>{title}</Heading>
         <p className="text-primary/85">{content}</p>
       </div>
-      <Image
-        src={image}
-        alt={imageAlt}
-        // width={548}
-        // height={440}
-        className="w-full md:w-1/2 lg:w-[548px] aspect-[548/440] md:border-2 md:border-[#2A3D524D]/20 md:rounded-[12px] object-cover"
-      />
+      <div className="relative aspect-[548/440] w-full flex-1">
+        <Image
+          src={image}
+          alt={imageAlt}
+          fill
+          className="object-cover md:rounded-[12px] md:border-2 md:border-[#2A3D524D]/20"
+        />
+      </div>
     </div>
   );
 };
