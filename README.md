@@ -29,6 +29,6 @@ The form data is written to a Google Sheet using Apps Script commands. After rec
 
 ## Remarks
 
-This was a relatively simple task, though not without its challenges. The Next.js Image component, when used with Tailwind, causes some unusual behavior, leading to layout shifts on larger viewports.
+This was a relatively simple task, though not without its challenges. There were layout shifts when the images in the 'How it works' section loaded, and CSS styling alone did not help. To fix it, I had to wrap the image in a container that controlled the width and height, and pass the nextjs/image fill property to the image.
 
 One thing I didn't include is testing, which would be a valuable addition.
